@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882694316495",
+    "project_id": "gastronav-oua",
+    "storage_bucket": "gastronav-oua.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882694316495:android:f607012ee1ca94bdb9b2ba",
+        "android_client_info": {
+          "package_name": "com.example.gastro_nav"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATvmy5PSlpCVh97aVwnLBVG7Tk5NpBTVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
