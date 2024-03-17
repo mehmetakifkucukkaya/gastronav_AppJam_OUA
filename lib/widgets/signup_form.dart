@@ -11,7 +11,7 @@ class SignupForm extends StatefulWidget {
 }
 
 class _SignupFormState extends State<SignupForm> {
-  late String email, password;
+  var email, password, kullaniciAdi, sehir, beslenmeTercihi, alerjiDurumu;
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +20,16 @@ class _SignupFormState extends State<SignupForm> {
     final ekranYuksekligi = ekranBilgisi.size.width;
     final ekranGenisligi = ekranBilgisi.size.width;
 
+    //* Firebase
     final firebaseAuth = FirebaseAuth.instance;
 
     //* Keys
     var emailController = TextEditingController();
     var sifreController = TextEditingController();
+    var kullaniciAdiController = TextEditingController();
+    var sehirController = TextEditingController();
+    var alerjiController = TextEditingController();
+    var beslenmeTercihiController = TextEditingController();
 
     var formKeySignUp = GlobalKey<FormState>();
 
@@ -91,6 +96,182 @@ class _SignupFormState extends State<SignupForm> {
                   },
                 ),
                 const SizedBox(height: 4),
+              ],
+            ),
+          ),
+
+          //* Kullanıcı Adı
+          Padding(
+            padding: EdgeInsets.all(ekranGenisligi / 40),
+            child: Column(
+              children: [
+                TextFormField(
+                  controller: kullaniciAdiController,
+                  decoration: const InputDecoration(
+                    hintText: "Kullanıcı Adı",
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                  ),
+                  validator: (sifreController) {
+                    if (sifreController!.isEmpty) {
+                      return "Bu alan boş bırakılamaz !";
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    var kullaniciAdi = value!;
+                  },
+                ),
+                const SizedBox(height: 4),
+              ],
+            ),
+          ),
+
+          //* Şehir
+          Padding(
+            padding: EdgeInsets.all(ekranGenisligi / 40),
+            child: Column(
+              children: [
+                TextFormField(
+                  controller: sehirController,
+                  decoration: const InputDecoration(
+                    hintText: "Şehir",
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                  ),
+                  validator: (sifreController) {
+                    if (sifreController!.isEmpty) {
+                      return "Bu alan boş bırakılamaz !";
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    var sehir = value!;
+                  },
+                ),
+                const SizedBox(height: 4),
+              ],
+            ),
+          ),
+
+          //*Alerji Durumu
+          Padding(
+            padding: EdgeInsets.all(ekranGenisligi / 40),
+            child: Column(
+              children: [
+                TextFormField(
+                  controller: TextEditingController(text: alerjiDurumu),
+                  readOnly: true,
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: const Text("Alerji Durumu"),
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ListTile(
+                                title: const Text('Var'),
+                                onTap: () {
+                                  setState(() {
+                                    alerjiDurumu = 'Var';
+                                  });
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                              ListTile(
+                                title: const Text('Yok'),
+                                onTap: () {
+                                  setState(() {
+                                    alerjiDurumu = 'Yok';
+                                  });
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    );
+                  },
+                  decoration: const InputDecoration(
+                    hintText: "Alerji Durumu",
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          //* Beslenme Tercihi
+          Padding(
+            padding: EdgeInsets.all(ekranGenisligi / 40),
+            child: Column(
+              children: [
+                TextFormField(
+                  readOnly: true,
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: const Text("Beslenme Tercihi"),
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ListTile(
+                                title: const Text('Vejeteryan'),
+                                onTap: () {
+                                  setState(() {
+                                    beslenmeTercihi = 'Vejeteryan';
+                                  });
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                              ListTile(
+                                title: const Text('Etli Yemekler'),
+                                onTap: () {
+                                  setState(() {
+                                    beslenmeTercihi = 'Etli Yemekler';
+                                  });
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    );
+                  },
+                  decoration: const InputDecoration(
+                    hintText: "Beslenme Tercihi",
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                  ),
+                  controller: TextEditingController(text: beslenmeTercihi),
+                ),
               ],
             ),
           ),
