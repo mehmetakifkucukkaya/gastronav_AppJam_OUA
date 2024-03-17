@@ -1,5 +1,6 @@
-// ignore_for_file: dead_code
+// ignore_for_file: dead_code, unused_local_variable, avoid_print
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SignupForm extends StatefulWidget {
@@ -18,6 +19,8 @@ class _SignupFormState extends State<SignupForm> {
 
     final ekranYuksekligi = ekranBilgisi.size.width;
     final ekranGenisligi = ekranBilgisi.size.width;
+
+    final firebaseAuth = FirebaseAuth.instance;
 
     //* Keys
     var emailController = TextEditingController();
@@ -99,11 +102,21 @@ class _SignupFormState extends State<SignupForm> {
               height: ekranYuksekligi / 10,
               width: ekranGenisligi / 1.4,
               child: TextButton(
-                onPressed: () {
+                onPressed: () async {
                   if (formKeySignUp.currentState!.validate()) {
                     formKeySignUp.currentState!.save();
 
-                    print("Email: $email Password: $password");
+                    try {
+                      var userResult = await firebaseAuth
+                          .createUserWithEmailAndPassword(
+                              email: email, password: password);
+
+                      //* Yönlendirme yapıyoruz
+                      Navigator.pushReplacementNamed(
+                          context, "/loginPage");
+                    } catch (e) {
+                      print(e.toString());
+                    }
                   }
                 },
                 style: ButtonStyle(
