@@ -10,6 +10,8 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
+  late String email, password;
+
   @override
   Widget build(BuildContext context) {
     var ekranBilgisi = MediaQuery.of(context);
@@ -47,8 +49,12 @@ class _LoginFormState extends State<LoginForm> {
                 }
                 return null;
               },
+              onSaved: (value) {
+                email = value!;
+              },
             ),
           ),
+
           //* Sifre
           Padding(
             padding: EdgeInsets.all(ekranGenisligi / 40),
@@ -77,8 +83,12 @@ class _LoginFormState extends State<LoginForm> {
                     }
                     return null;
                   },
+                  onSaved: (value) {
+                    password = value!;
+                  },
                 ),
                 const SizedBox(height: 4),
+
                 //* Şifremi Unuttum
                 GestureDetector(
                   child: const Align(
@@ -102,13 +112,9 @@ class _LoginFormState extends State<LoginForm> {
               child: TextButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Center(
-                          child: Text('Giriş Yapılıyor...'),
-                        ),
-                      ),
-                    );
+                    formKey.currentState!.save();
+
+                    print("Email: $email Password: $password");
                   }
                 },
                 style: ButtonStyle(
