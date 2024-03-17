@@ -1,4 +1,4 @@
-// ignore_for_file: dead_code, unused_local_variable, avoid_print
+// ignore_for_file: dead_code, unused_local_variable, avoid_print, use_build_context_synchronously
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -112,6 +112,7 @@ class _SignupFormState extends State<SignupForm> {
                               email: email, password: password);
 
                       //* Yönlendirme yapıyoruz
+
                       Navigator.pushReplacementNamed(
                           context, "/loginPage");
                     } catch (e) {

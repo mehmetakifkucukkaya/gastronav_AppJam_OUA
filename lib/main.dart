@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gastro_nav/firebase_options.dart';
 import 'package:gastro_nav/pages/auth/login_page.dart';
 import 'package:gastro_nav/pages/auth/signup_page.dart';
+import 'package:gastro_nav/pages/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/loginPage": (context) => const LoginPage(),
         "/signUp": (context) => const SignUpPage(),
+        "/homePage": (context) => const HomePage(),
       },
       home: const LoginPage(),
     );

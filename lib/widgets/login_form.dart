@@ -1,5 +1,6 @@
-// ignore_for_file: dead_code
+// ignore_for_file: dead_code, avoid_print, unused_local_variable
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatefulWidget {
@@ -24,6 +25,8 @@ class _LoginFormState extends State<LoginForm> {
     var sifreController = TextEditingController();
 
     var formKey = GlobalKey<FormState>();
+
+    final firebaseAuth = FirebaseAuth.instance;
 
     return Form(
       key: formKey,
@@ -110,11 +113,20 @@ class _LoginFormState extends State<LoginForm> {
               height: ekranYuksekligi / 10,
               width: ekranGenisligi / 1.4,
               child: TextButton(
-                onPressed: () {
+                onPressed: () async {
                   if (formKey.currentState!.validate()) {
-                    formKey.currentState!.save();
+                    formKey.currentState!
+                        .save(); //* Textfieldlarn içerisindeki onSaved metotlarını çalıştırır
 
-                    print("Email: $email Password: $password");
+                    try {
+                      final userResult =
+                          await firebaseAuth.signInWithEmailAndPassword(
+                              email: email, password: password);
+
+                      Navigator.pushNamed(context, "/homePage");
+                    } catch (e) {
+                      print(e.toString());
+                    }
                   }
                 },
                 style: ButtonStyle(
