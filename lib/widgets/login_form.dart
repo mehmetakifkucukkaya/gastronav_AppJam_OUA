@@ -126,6 +126,24 @@ class _LoginFormState extends State<LoginForm> {
                       Navigator.pushNamed(context, "/homePage");
                     } catch (e) {
                       print(e.toString());
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text('Hata'),
+                            content:
+                                const Text('E-posta veya şifre hatalı.'),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: const Text('Tamam'),
+                              ),
+                            ],
+                          );
+                        },
+                      );
                     }
                   }
                 },

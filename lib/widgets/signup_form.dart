@@ -1,5 +1,6 @@
 // ignore_for_file: dead_code, unused_local_variable, avoid_print, use_build_context_synchronously
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,7 @@ class _SignupFormState extends State<SignupForm> {
 
     //* Firebase
     final firebaseAuth = FirebaseAuth.instance;
+    final firebaseFirestore = FirebaseFirestore.instance;
 
     //* Keys
     var emailController = TextEditingController();
@@ -284,21 +286,43 @@ class _SignupFormState extends State<SignupForm> {
               width: ekranGenisligi / 1.4,
               child: TextButton(
                 onPressed: () async {
+                  String? res;
+
                   if (formKeySignUp.currentState!.validate()) {
                     formKeySignUp.currentState!.save();
 
                     try {
-                      var userResult = await firebaseAuth
+                      final userResult = await firebaseAuth
                           .createUserWithEmailAndPassword(
                               email: email, password: password);
-
-                      //* Yönlendirme yapıyoruz
-
-                      Navigator.pushReplacementNamed(
-                          context, "/loginPage");
-                    } catch (e) {
-                      print(e.toString());
+                      try {
+                        final resultData = await firebaseFirestore
+                            .collection("Users")
+                            .add({
+                          "email": email,
+                          "nickName": kullaniciAdi,
+                          "city": sehir,
+                        });
+                      } catch (e) {
+                        print(e.toString());
+                      }
+                    } on FirebaseAuthException catch (e) {
+                      switch (e.code) {
+                        case "email-already-in-use":
+                          res = "Mail Zaten Kayitli.";
+                          break;
+                        case "ERROR_INVALID_EMAIL":
+                        case "invalid-email":
+                          res = "Gecersiz Mail";
+                          break;
+                        default:
+                          res =
+                              "Bir Hata Ile Karsilasildi, Birazdan Tekrar Deneyiniz.";
+                          break;
+                      }
                     }
+                    //* Yönlendirme yapıyoruz
+                    Navigator.pushReplacementNamed(context, "/loginPage");
                   }
                 },
                 style: ButtonStyle(
