@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+class SignupForm extends StatefulWidget {
+  const SignupForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<SignupForm> createState() => _SignupFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _SignupFormState extends State<SignupForm> {
   late String email, password;
 
   @override
@@ -20,20 +20,20 @@ class _LoginFormState extends State<LoginForm> {
     final ekranGenisligi = ekranBilgisi.size.width;
 
     //* Keys
-    var emailAdiController = TextEditingController();
+    var emailController = TextEditingController();
     var sifreController = TextEditingController();
 
-    var formKey = GlobalKey<FormState>();
+    var formKeySignUp = GlobalKey<FormState>();
 
     return Form(
-      key: formKey,
+      key: formKeySignUp,
       child: Column(
         children: [
           //* Email
           Padding(
             padding: EdgeInsets.all(ekranGenisligi / 40),
             child: TextFormField(
-              controller: emailAdiController,
+              controller: emailController,
               decoration: const InputDecoration(
                 hintText: "Email",
                 filled: true,
@@ -43,8 +43,8 @@ class _LoginFormState extends State<LoginForm> {
                   Radius.circular(10),
                 )),
               ),
-              validator: (emailAdiController) {
-                if (emailAdiController!.isEmpty) {
+              validator: (emailController) {
+                if (emailController!.isEmpty) {
                   return "Email alanı boş bırakılamaz !";
                 }
                 return null;
@@ -88,17 +88,6 @@ class _LoginFormState extends State<LoginForm> {
                   },
                 ),
                 const SizedBox(height: 4),
-
-                //* Şifremi Unuttum
-                GestureDetector(
-                  child: const Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      "Şifremi Unuttum",
-                      style: TextStyle(color: Color(0xFF60BA46)),
-                    ),
-                  ),
-                ),
               ],
             ),
           ),
@@ -111,8 +100,8 @@ class _LoginFormState extends State<LoginForm> {
               width: ekranGenisligi / 1.4,
               child: TextButton(
                 onPressed: () {
-                  if (formKey.currentState!.validate()) {
-                    formKey.currentState!.save();
+                  if (formKeySignUp.currentState!.validate()) {
+                    formKeySignUp.currentState!.save();
 
                     print("Email: $email Password: $password");
                   }
@@ -127,42 +116,13 @@ class _LoginFormState extends State<LoginForm> {
                       MaterialStateProperty.all(const Color(0xFF60BA46)),
                 ),
                 child: Text(
-                  "Giriş Yap",
+                  "Kayıt Ol",
                   style: TextStyle(
                       color: Colors.white, fontSize: ekranGenisligi / 26),
                 ),
               ),
             ),
           ),
-
-          const Icon(
-            Icons.keyboard_arrow_down_outlined,
-            color: Color(0xFF60BA46),
-            size: 40,
-          ),
-
-          //* Kayıt Ol Yazısı
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Hesabınız yok mu ? ",
-                style: TextStyle(
-                  color: Colors.grey.shade600,
-                ),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.pushNamed(context, "/signUp"),
-                child: const Text(
-                  "Kayıt Ol",
-                  style: TextStyle(
-                    color: Color(0xFF60BA46),
-                  ),
-                ),
-              )
-            ],
-          )
         ],
       ),
     );
