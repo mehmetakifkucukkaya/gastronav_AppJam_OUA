@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class RestaurantPage extends StatelessWidget {
   const RestaurantPage({super.key, required this.restaurant});
@@ -81,16 +82,27 @@ class RestaurantPage extends StatelessWidget {
                           children: [
                             Column(
                               children: [
-                                CircleAvatar(
-                                  backgroundImage:
-                                      NetworkImage(menu["menuFoto"]),
-                                  radius: 30,
+                                GestureDetector(
+                                  onTap: () {
+                                    _showRecipeModal(
+                                        context,
+                                        menu["menuFoto"],
+                                        menu["tarif"],
+                                        menu["malzemeler"],
+                                        menu["puan"],
+                                        menu["fiyat"]);
+                                  },
+                                  child: CircleAvatar(
+                                    backgroundImage:
+                                        NetworkImage(menu["menuFoto"]),
+                                    radius: 35,
+                                  ),
                                 ),
                                 Text(
                                   menu["menuIsmi"],
                                   style: TextStyle(
                                     color: Colors.grey.shade600,
-                                    fontSize: 14,
+                                    fontSize: 13,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
@@ -128,4 +140,71 @@ class RestaurantPage extends StatelessWidget {
       ),
     );
   }
+}
+
+void _showRecipeModal(BuildContext context, String img, String recipe,
+    List<String> ingredients, String vote, String price) {
+  showModalBottomSheet(
+    context: context,
+    builder: (BuildContext context) {
+      return Container(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.network(img),
+              const SizedBox(
+                height: 10,
+              ),
+              //* Fiyat ve Puan
+              Row(
+                children: [
+                  Icon(Icons.star, color: Colors.yellow.shade700),
+                  Text(
+                    vote,
+                    style: const TextStyle(fontSize: 16),
+                  ),
+                  const SizedBox(width: 150),
+                  Text(
+                    "$price TL",
+                    style: const TextStyle(fontSize: 16),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              //* Tarif
+              const Text(
+                "Tarif:",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(recipe),
+              const SizedBox(height: 16),
+              const Text(
+                "Malzemeler:",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: ingredients
+                    .map((ingredient) => Text(ingredient))
+                    .toList(),
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
 }
