@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
 class RestaurantCard extends StatelessWidget {
-  const RestaurantCard({
-    super.key,
-  });
+  const RestaurantCard(
+      {super.key,
+      required this.category,
+      required this.price,
+      required this.title,
+      required this.img,
+      required this.vote});
+
+  final String title, category, price, vote, img;
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +17,12 @@ class RestaurantCard extends StatelessWidget {
       child: Row(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(
-                14), // İstediğiniz border-radius değerini buraya girin
+            borderRadius: BorderRadius.circular(14),
             child: SizedBox(
               height: 100,
               width: 100,
               child: Image.network(
-                "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                img,
                 fit: BoxFit.cover,
               ),
             ),
@@ -28,13 +33,13 @@ class RestaurantCard extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                const Text(
-                  "Taş Mutfak Yöresel Yemekleri",
-                  style:
-                      TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                Text(
+                  title,
+                  style: const TextStyle(
+                      fontSize: 17, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "Yöresel Yemekler",
+                  category,
                   style:
                       TextStyle(color: Colors.grey.shade500, fontSize: 15),
                 ),
@@ -45,14 +50,14 @@ class RestaurantCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "9.2/10",
+                      "$vote/10",
                       style: TextStyle(
                         color: Colors.grey.shade500,
                       ),
                     ),
                     const SizedBox(width: 16),
                     Text(
-                      "150 TL",
+                      "$price TL",
                       style: TextStyle(
                         color: Colors.grey.shade500,
                       ),

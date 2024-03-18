@@ -1,6 +1,5 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
+import 'package:gastro_nav/data/data.dart';
 import 'package:gastro_nav/widgets/RestaurantCard.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,6 +11,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var searchController = TextEditingController();
+
+  var data = Data().restaurantCardItems;
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         TextButton(
                           onPressed: () {
-                            print("Öne Çıkanlar gösterielcek");
+                            print("Öne Çıkanlar gösterilecek");
                           },
                           child: const Text(
                             "Öne Çıkanlar",
@@ -69,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         TextButton(
                           onPressed: () {
-                            print("Popülerler gösterielcek");
+                            print("Popülerler gösterilecek");
                           },
                           child: const Text(
                             "Popüler",
@@ -85,12 +86,22 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 //* Cards Area
-                const RestaurantCard(),
-                const RestaurantCard(),
-                const RestaurantCard(),
-                const RestaurantCard(),
-                const RestaurantCard(),
-                const RestaurantCard(),
+                ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: data.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final item = data[index];
+
+                    return RestaurantCard(
+                      title: item["restoranIsmi"],
+                      category: item["menu"][0]["kategori"],
+                      price: item["menu"][0]["fiyat"],
+                      vote: item["menu"][0]["puan"],
+                      img: item["restoranKapakFoto"],
+                    );
+                  },
+                ),
               ],
             ),
           ),
