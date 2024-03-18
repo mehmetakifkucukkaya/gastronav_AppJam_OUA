@@ -17,7 +17,7 @@
 
 *Ana sayfada bulundukları konumdaki yerel restoranları görüntüleyebilirler*
 
-![HomePage]()
+![HomePage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/HomePage.png)
 
 *Seçtikleri restorandaki menüleri görüntüleyebilirler *
 
