@@ -9,7 +9,7 @@
 
 *Uygulamaya Giriş sayfasıdır.Kullanıcılar eğer uygulamaya kayıtlı iseler mail ve şifrelerini girerek ana sayfaya yönlendirilirler.*
 
-![LogIn Page ]()
+![LogIn Page ](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/LoginPage.png)
 
 *Kayıtlı olmamaları durumunda görseldeki bilgileri girerek kayıt işlemlerini tamamlar ve ana sayfaya yönlendirilirler.*
 
