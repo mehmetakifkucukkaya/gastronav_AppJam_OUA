@@ -39,7 +39,7 @@
 
 *Bu sayfadan uygulamayla ilgili ayarlara ve sosyal medyada paylaşabilecekleri profile ulaşabilirler*
 
-![SettingPage]()
+![SettingPage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/SettingsPage.png)
 
 
 *Bu sayfada gidecekleri restoranlara yol tarifi alarak kolayca ulaşabilirler*
