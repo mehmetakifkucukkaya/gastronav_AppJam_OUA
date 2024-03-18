@@ -1,0 +1,41 @@
+{
+    "etkinlikler_ve_festivaller": {
+        "İstanbul": [
+            {
+                "etkinlikAdi": "Lezzet Zirvesi: İstanbul Gastronomi Şöleni",
+                "tarih": "5 Mayıs - 15 Mayıs",
+                "yer": "İstanbul Kongre ve Fuar Merkezi"
+            },
+            {
+                "etkinlikAdi": "Lezzet ve Kültür Buluşması: İstanbul Tadım Festivali",
+                "tarih": "10 Temmuz - 20 Temmuz",
+                "yer": "İstanbul'un Tarihi Semtleri"
+            },
+            {
+                "etkinlikAdi": "İstanbul'un Saklı Lezzetleri Festivali",
+                "tarih": "1 Haziran - 15 Haziran",
+                "yer": "Çeşitli İstanbul Mahalleleri"
+            },
+            {
+                "etkinlikAdi": "İstanbul'un Lezzet Yolculuğu: Geleneksel Tatlar Festivali",
+                "tarih": "20 Ağustos - 30 Ağustos",
+                "yer": "İstanbul'un Restoran ve Lokantaları"
+            },
+            {
+                "etkinlikAdi": "Yenilikçi Lezzetler: İstanbul Yemek İnovasyon Fuarı",
+                "tarih": "10 Ekim - 20 Ekim",
+                "yer": "İstanbul Kongre Merkezi"
+            },
+            {
+                "etkinlikAdi": "İstanbul'un Tatlı Güzellikleri Şöleni",
+                "tarih": "15 Şubat - 25 Şubat",
+                "yer": "İstanbul'un Pastaneleri ve Tatlıcıları"
+            },
+            {
+                "etkinlikAdi": "İstanbul'un Aromalı Yolculuğu: Baharat Festivali",
+                "tarih": "5 Aralık - 15 Aralık",
+                "yer": "İstanbul Baharat Pazarları ve Çarşıları"
+            }
+        ]
+    }
+}

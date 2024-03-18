@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gastro_nav/data/data.dart';
-import 'package:gastro_nav/pages/event_page.dart';
+import 'package:gastro_nav/pages/festival_page.dart';
 import 'package:gastro_nav/pages/home_page.dart';
 import 'package:gastro_nav/pages/maps_page.dart';
 import 'package:gastro_nav/pages/settings_page.dart';
@@ -29,7 +29,7 @@ class _HomePageBottomNavbarState extends State<HomePageBottomNavbar> {
   final List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
     const MapsPage(),
-    const EventsPage(),
+    const FestivalPage(),
     const SettingsPage(),
   ];
 
