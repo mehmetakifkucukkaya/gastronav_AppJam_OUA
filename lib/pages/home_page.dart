@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:gastro_nav/data/data.dart';
+import 'package:gastro_nav/pages/restaurant_page.dart';
 import 'package:gastro_nav/widgets/RestaurantCard.dart';
 
 class HomePage extends StatefulWidget {
@@ -83,12 +84,24 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (BuildContext context, int index) {
                     final item = data[index];
 
-                    return RestaurantCard(
-                      title: item["restoranIsmi"],
-                      category: item["menu"][0]["kategori"],
-                      price: item["menu"][0]["fiyat"],
-                      vote: item["menu"][0]["puan"],
-                      img: item["restoranKapakFoto"],
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RestaurantPage(
+                              restaurant: item,
+                            ),
+                          ),
+                        );
+                      },
+                      child: RestaurantCard(
+                        title: item["restoranIsmi"],
+                        category: item["menu"][0]["kategori"],
+                        price: item["menu"][0]["fiyat"],
+                        vote: item["menu"][0]["puan"],
+                        img: item["restoranKapakFoto"],
+                      ),
                     );
                   },
                 ),
