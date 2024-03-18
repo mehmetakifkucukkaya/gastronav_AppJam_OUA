@@ -25,7 +25,7 @@
 
 *Buradan meni detayları hakkında bilgi alabilirler.*
 
-![MenuDetails]()
+![MenuDetails](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/MenuDetails.png)
 
 *Burada promosyon sayfasından kullanıcıya özel fırstaları görüntüleyebilirler*
 
