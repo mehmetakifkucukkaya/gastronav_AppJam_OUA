@@ -5,6 +5,7 @@ import 'package:gastro_nav/pages/auth/login_page.dart';
 import 'package:gastro_nav/pages/auth/signup_page.dart';
 import 'package:gastro_nav/pages/home_page_bottom_navbar.dart';
 import 'package:gastro_nav/pages/promotion_page.dart';
+import 'package:gastro_nav/pages/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         "/homePage": (context) => const HomePageBottomNavbar(),
         "/promotionPage": (context) => const PromotionPage(),
       },
-      home: const HomePageBottomNavbar(),
+      home: const SplashScreen(),
     );
   }
 }

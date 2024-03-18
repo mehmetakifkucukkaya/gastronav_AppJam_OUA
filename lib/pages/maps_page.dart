@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -11,9 +9,6 @@ class MapsPage extends StatefulWidget {
 }
 
 class MapsPageState extends State<MapsPage> {
-  final Completer<GoogleMapController> _controller =
-      Completer<GoogleMapController>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
