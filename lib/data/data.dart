@@ -168,4 +168,25 @@ class Data {
       "bitisTarihi": "2024-09-30"
     }
   ];
+
+  var user = {
+    "user1": {
+      "email": "akif@gmail.com",
+      "ad": "Mehmet Akif",
+      "soyad": "Küçükkaya",
+      "sehir": "İstanbul",
+      "alerjiDurumu": "yok",
+      "beslenmeTercihi": "vejetaryen",
+      "uygulamaKullanımSayısı": 25
+    },
+    "user2": {
+      "email": "beyza@gmail.com",
+      "ad": "Beyza Nur",
+      "soyad": "Taşkesen",
+      "sehir": "İstanbul",
+      "alerjiDurumu": "var",
+      "beslenmeTercihi": "vejetaryen",
+      "uygulamaKullanımSayısı": 67
+    },
+  };
 }

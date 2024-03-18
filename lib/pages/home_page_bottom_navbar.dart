@@ -30,7 +30,7 @@ class _HomePageBottomNavbarState extends State<HomePageBottomNavbar> {
     const HomePage(),
     const MapsPage(),
     const FestivalPage(),
-    const SettingsPage(),
+    SettingsPage(),
   ];
 
   @override
