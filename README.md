@@ -45,7 +45,7 @@
 *Bu sayfada gidecekleri restoranlara yol tarifi alarak kolayca ulaşabilirler*
 
 
-![MapsPage]()
+![MapsPage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/MapsPage.png)
 
 
 
