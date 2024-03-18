@@ -13,7 +13,7 @@
 
 *Kayıtlı olmamaları durumunda görseldeki bilgileri girerek kayıt işlemlerini tamamlar ve ana sayfaya yönlendirilirler.*
 
-! [SignUp Page]()
+! [SignUp Page](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/S%C4%B1gnUp.png)
 
 *Ana sayfada bulundukları konumdaki yerel restoranları görüntüleyebilirler*
 
