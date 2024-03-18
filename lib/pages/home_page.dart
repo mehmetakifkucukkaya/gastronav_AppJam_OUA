@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:gastro_nav/data/data.dart';
 import 'package:gastro_nav/widgets/RestaurantCard.dart';
@@ -17,18 +19,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 10.0),
-            child: Icon(
-              Icons.notifications,
-              color: Color(0xFF60BA46),
-              size: 40,
-            ),
-          ),
-        ],
-      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
