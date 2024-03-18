@@ -5,33 +5,48 @@
 
 *Birinci Görselimizde uygulamayı indirdiğinizde karşınıza çıkacak olan uygulamamızın logosunu içeren görseldir.*
 
+
 ![SplashScreen](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/SplashScreen.png)
+
 
 *Uygulamaya Giriş sayfasıdır.Kullanıcılar eğer uygulamaya kayıtlı iseler mail ve şifrelerini girerek ana sayfaya yönlendirilirler.*
 
+
 ![LogIn Page ](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/LoginPage.png)
+
 
 *Kayıtlı olmamaları durumunda görseldeki bilgileri girerek kayıt işlemlerini tamamlar ve ana sayfaya yönlendirilirler.*
 
+
 ! [SignUp Page](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/S%C4%B1gnUp.png)
+
 
 *Ana sayfada bulundukları konumdaki yerel restoranları görüntüleyebilirler*
 
+
 ![HomePage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/HomePage.png)
+
 
 *Seçtikleri restorandaki menüleri görüntüleyebilirler *
 
+
 ![RestaurantPage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/RestaurantPage.png)
+
 
 *Buradan meni detayları hakkında bilgi alabilirler.*
 
+
 ![MenuDetails](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/MenuDetails.png)
+
 
 *Burada promosyon sayfasından kullanıcıya özel fırstaları görüntüleyebilirler*
 
+
 ![Promotion Page](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/PromotionPage.png)
 
+
 *Bu sayfadan yakın tarihlerdeki festival yerleri ve saatleri hakkında bilgi edinebililer.*
+
 
 
 ![FestivalPage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/FestivalPage.png)
@@ -42,10 +57,13 @@
 ![SettingPage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/SettingsPage.png)
 
 
+
 *Bu sayfada gidecekleri restoranlara yol tarifi alarak kolayca ulaşabilirler*
 
 
+
 ![MapsPage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/MapsPage.png)
+
 
 
 
