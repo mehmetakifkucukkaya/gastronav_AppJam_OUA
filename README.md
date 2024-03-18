@@ -21,7 +21,7 @@
 
 *Seçtikleri restorandaki menüleri görüntüleyebilirler *
 
-![RestaurantPage]()
+![RestaurantPage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/RestaurantPage.png)
 
 *Buradan meni detayları hakkında bilgi alabilirler.*
 
