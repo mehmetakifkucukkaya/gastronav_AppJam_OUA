@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 class RestaurantPage extends StatelessWidget {
   const RestaurantPage({super.key, required this.restaurant});
 
@@ -117,7 +114,7 @@ class RestaurantPage extends StatelessWidget {
                   ),
                 ],
               ),
-              
+
               //* Promosypn
               GestureDetector(
                 onTap: () {

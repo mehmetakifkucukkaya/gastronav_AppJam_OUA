@@ -118,6 +118,121 @@ class Data {
               "Pirinç pilavı için, pirinçleri yıkayıp süzün. Soğan ve sarımsağı kavurun, etleri ekleyin. Baharat ve salçayı ekleyip pişirin. Son olarak pirinç ve suyu ilave edin. Pilavı demlendirip servis edin."
         }
       ]
+    },
+    {
+      "restoranIsmi": "Lezzetin Adresi",
+      "restoranKapakFoto":
+          "https://images.pexels.com/photos/16822418/pexels-photo-16822418/free-photo-of-restoran-isiklar-masa-tablo.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "restoranCoordinates": {"enlem": "41.0420", "boylam": "29.0017"},
+      "menu": [
+        {
+          "menuIsmi": "Karadeniz Pidesi",
+          "menuFoto":
+              "https://media.istockphoto.com/id/1194320941/tr/foto%C4%9Fraf/yumurta-ve-k%C4%B1yma-ile-t%C3%BCrk-pide-karadeniz-pidesi.jpg?b=1&s=612x612&w=0&k=20&c=gX1V07oqZZeOoo3GQL6Z4A0t8MknDuVxTCAvAwpkJi0=",
+          "kategori": "Yöresel Yemekler",
+          "puan": "4.7",
+          "fiyat": "125.99",
+          "malzemeler": [
+            "Karadeniz yağlısı",
+            "Peynir",
+            "Maydanoz",
+            "Domates",
+            "Biber"
+          ],
+          "tarif":
+              "Hamuru yoğurun, şekil verin. İç malzemesini ekleyip fırında pişirin."
+        },
+        {
+          "menuIsmi": "Laz Böreği",
+          "menuFoto":
+              "https://images.pexels.com/photos/17138050/pexels-photo-17138050/free-photo-of-gida-firin-tatli-firinda-pisirmek.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "kategori": "Tatlılar",
+          "puan": "4.6",
+          "fiyat": "119.99",
+          "malzemeler": ["Yufka", "Peynir", "Süt", "Yumurta", "Şeker"],
+          "tarif":
+              "Yufkayı açın, iç malzemesiyle doldurun, rulo yapın ve fırında pişirin."
+        }
+      ]
+    },
+    {
+      "restoranIsmi": "Safran Restoran",
+      "restoranKapakFoto":
+          "https://images.pexels.com/photos/16930553/pexels-photo-16930553/free-photo-of-restoran-otel-masa-tablo.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "restoranCoordinates": {"enlem": "40.9947", "boylam": "28.8107"},
+      "menu": [
+        {
+          "menuIsmi": "Safranlı Pilav",
+          "menuFoto":
+              "https://images.pexels.com/photos/20476110/pexels-photo-20476110/free-photo-of-eller-kadin-aksam-yemegi-domates.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "kategori": "Ana Yemekler",
+          "puan": "4.9",
+          "fiyat": "90.99",
+          "malzemeler": [
+            "Pirinç",
+            "Tavuk suyu",
+            "Safran",
+            "Tereyağı",
+            "Tuz"
+          ],
+          "tarif":
+              "Pirinci yıkayıp süzün. Tavuk suyu ve safran ile pişirin, üzerine tereyağı ekleyerek servis yapın."
+        },
+        {
+          "menuIsmi": "Fırın Kebabı",
+          "menuFoto":
+              "https://media.istockphoto.com/id/1205499089/tr/foto%C4%9Fraf/baharat-kar%C4%B1%C5%9F%C4%B1m%C4%B1-ile-%C5%9Fi%C5%9F-ler-%C3%BCzerinde-kavrulmu%C5%9F-k%C4%B1yma-kuzu-eti-kofta-kebap.jpg?b=1&s=612x612&w=0&k=20&c=NkAeTmz_YbSWFwzoDzDl9Nun5jicZniXPUPZD46Kznk=",
+          "kategori": "Et Yemekleri",
+          "puan": "4.7",
+          "fiyat": "255.99",
+          "malzemeler": [
+            "Kuzu eti",
+            "Patates",
+            "Domates",
+            "Biber",
+            "Baharatlar"
+          ],
+          "tarif":
+              "Eti doğrayıp baharatlayın, patates ve sebzelerle fırında pişirin."
+        }
+      ]
+    },
+    {
+      "restoranIsmi": "Deniz Köşesi",
+      "restoranKapakFoto":
+          "https://images.pexels.com/photos/16930510/pexels-photo-16930510/free-photo-of-restoran-masa-tablo-sandalyeler.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "restoranCoordinates": {"enlem": "41.0260", "boylam": "28.9741"},
+      "menu": [
+        {
+          "menuIsmi": "Deniz Ürünleri Tabagi",
+          "menuFoto":
+              "https://images.pexels.com/photos/19671382/pexels-photo-19671382/free-photo-of-gida-plaka-saglikli-sebzeler.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "kategori": "Deniz Ürünleri",
+          "puan": "4.8",
+          "fiyat": "175.99",
+          "malzemeler": [
+            "Karides",
+            "Kalamar",
+            "Midye",
+            "Balık",
+            "Limon",
+            "Soslar"
+          ],
+          "tarif":
+              "Deniz ürünlerini marine edin ve ızgarada pişirin, limon ve soslarla servis yapın."
+        },
+        {
+          "menuIsmi": "Balık Çorbası",
+          "menuFoto":
+              "https://media.istockphoto.com/id/494154858/tr/foto%C4%9Fraf/hot-homemade-corn-chowder.jpg?b=1&s=612x612&w=0&k=20&c=quFW0ySV91HitAHtCmUetRkmxYa0jsx7uT18xfaZD00=",
+          "kategori": "Çorbalar",
+          "puan": "4.5",
+          "fiyat": "128.99",
+          "malzemeler": ["Balık", "Sebzeler", "Baharatlar", "Köri", "Süt"],
+          "tarif":
+              "Balık ve sebzeleri haşlayın, baharatlarla pişirin, köri ve süt ekleyerek çorba yapın."
+        }
+      ]
     }
   ];
 
