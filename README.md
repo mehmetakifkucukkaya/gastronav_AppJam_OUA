@@ -34,7 +34,7 @@
 *Bu sayfadan yakın tarihlerdeki festival yerleri ve saatleri hakkında bilgi edinebililer.*
 
 
-![FestivalPage]()
+![FestivalPage](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/FestivalPage.png)
 
 
 *Bu sayfadan uygulamayla ilgili ayarlara ve sosyal medyada paylaşabilecekleri profile ulaşabilirler*
