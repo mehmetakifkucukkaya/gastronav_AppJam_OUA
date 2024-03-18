@@ -1,16 +1,55 @@
-# gastro_nav
+# Gastronav Uygulaması
+## Projenin Amacı
 
-A new Flutter project.
+**GastroNav uygulaması, kullanıcıların  bulundukları şehirdeki yerel yemek  restoranları keşfetmelerine,harita özelliğini kullanarak  gitmek  istedikleri restorana  ulaşımını kolaylaştırmasına olanak sağlayan, menülerdeki yemek  tariflerini ve buna ek olarak  menüdeki yemeklerin  hangi malzemelerden yapıldıklarını incelemelerine bu sayede olası sağlık problemlerine karşı bilinçli beslenmeyi teşvik eden, değerlendirmelerini paylaşmalarına ve gastronomi etkinliklerini takip etmelerine olanak tanıyan bir mobil uygulamadır. Uygulamanın amacı, kullanıcıların yeme-içme deneyimlerini daha keyifli hale getirmek ve gastronomiyle ilgili etkinliklere kolayca erişim sağlamaktır.**
 
-## Getting Started
+*Birinci Görselimizde uygulamayı indirdiğinizde karşınıza çıkacak olan uygulamamızın logosunu içeren görseldir.*
 
-This project is a starting point for a Flutter application.
+![SplashScreen]()
 
-A few resources to get you started if this is your first Flutter project:
+*Uygulamaya Giriş sayfasıdır.Kullanıcılar eğer uygulamaya kayıtlı iseler mail ve şifrelerini girerek ana sayfaya yönlendirilirler.*
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![LogIn Page ]()
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*Kayıtlı olmamaları durumunda görseldeki bilgileri girerek kayıt işlemlerini tamamlar ve ana sayfaya yönlendirilirler.*
+
+! [SignUp Page]()
+
+*Ana sayfada bulundukları konumdaki yerel restoranları görüntüleyebilirler*
+
+![HomePage]()
+
+*Seçtikleri restorandaki menüleri görüntüleyebilirler *
+
+![RestaurantPage]()
+
+*Buradan meni detayları hakkında bilgi alabilirler.*
+
+![MenuDetails]()
+
+*Burada promosyon sayfasından kullanıcıya özel fırstaları görüntüleyebilirler*
+
+![Promotion Page]()
+
+*Bu sayfadan yakın tarihlerdeki festival yerleri ve saatleri hakkında bilgi edinebililer.*
+
+
+![FestivalPage]()
+
+
+*Bu sayfadan uygulamayla ilgili ayarlara ve sosyal medyada paylaşabilecekleri profile ulaşabilirler*
+
+![SettingPage]()
+
+
+*Bu sayfada gidecekleri restoranlara yol tarifi alarak kolayca ulaşabilirler*
+
+
+![MapsPage]()
+
+
+
+
+
+
+
