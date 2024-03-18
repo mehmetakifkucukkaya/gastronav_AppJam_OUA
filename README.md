@@ -5,7 +5,7 @@
 
 *Birinci Görselimizde uygulamayı indirdiğinizde karşınıza çıkacak olan uygulamamızın logosunu içeren görseldir.*
 
-![SplashScreen]()
+![SplashScreen](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/SplashScreen.png)
 
 *Uygulamaya Giriş sayfasıdır.Kullanıcılar eğer uygulamaya kayıtlı iseler mail ve şifrelerini girerek ana sayfaya yönlendirilirler.*
 
