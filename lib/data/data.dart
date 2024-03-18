@@ -120,4 +120,52 @@ class Data {
       ]
     }
   ];
+
+  var promotions = [
+    {
+      "restoran": "Taş mutfak Yöresel Yemekler",
+      "indirimAdı": "Hoş Geldin İndirimi",
+      "indirimOranı": "10%",
+      "indirimKodu": "WELCOME10",
+      "minimumSiparisTutari": 50,
+      "gecerlilikTarihi": "2024-03-20",
+      "bitisTarihi": "2024-06-30"
+    },
+    {
+      "restoran": "Taş mutfak Yöresel Yemekler",
+      "indirimAdı": "Öğle Arası İndirimi",
+      "indirimOranı": "15%",
+      "indirimKodu": "LUNCH15",
+      "minimumSiparisTutari": 40,
+      "gecerlilikTarihi": "2024-04-01",
+      "bitisTarihi": "2024-08-31"
+    },
+    {
+      "restoran": "Taş mutfak Yöresel Yemekler",
+      "indirimAdı": "Sadakat Kartı",
+      "indirimOranı": "5 TL",
+      "indirimKodu": "SADAKAT5",
+      "minimumSiparisTutari": 30,
+      "gecerlilikTarihi": "2024-01-01",
+      "bitisTarihi": "2024-12-31"
+    },
+    {
+      "restoran": "Hünkar Lokantası",
+      "indirimAdı": "Açılış İndirimi",
+      "indirimOranı": "20%",
+      "indirimKodu": "OPENING20",
+      "minimumSiparisTutari": 60,
+      "gecerlilikTarihi": "2024-04-15",
+      "bitisTarihi": "2024-07-31"
+    },
+    {
+      "restoran": "Hünkar Lokantası",
+      "indirimAdı": "Hafta Sonu Keyfi",
+      "indirimOranı": "25%",
+      "indirimKodu": "WEEKEND25",
+      "minimumSiparisTutari": 70,
+      "gecerlilikTarihi": "2024-05-01",
+      "bitisTarihi": "2024-09-30"
+    }
+  ];
 }

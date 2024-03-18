@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -116,20 +117,26 @@ class RestaurantPage extends StatelessWidget {
                   ),
                 ],
               ),
+              
               //* Promosypn
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.green.shade500,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                width: 350,
-                height: 50,
-                child: const Center(
-                  child: Text(
-                    "Senin için Özel indirimler ve Promosyonlar",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/promotionPage");
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.green.shade500,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  width: 350,
+                  height: 50,
+                  child: const Center(
+                    child: Text(
+                      "Senin için Özel indirimler ve Promosyonlar",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
