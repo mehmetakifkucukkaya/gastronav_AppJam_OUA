@@ -29,7 +29,7 @@
 
 *Burada promosyon sayfasından kullanıcıya özel fırstaları görüntüleyebilirler*
 
-![Promotion Page]()
+![Promotion Page](https://github.com/mehmetakifkucukkaya/gastronav_AppJam_OUA/blob/main/ProjeGorselleri/PromotionPage.png)
 
 *Bu sayfadan yakın tarihlerdeki festival yerleri ve saatleri hakkında bilgi edinebililer.*
 
